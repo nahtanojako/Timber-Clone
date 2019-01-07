@@ -1,0 +1,52 @@
+.card
+  border: 1px solid $gray-200
+  margin-bottom: 2rem
+  +transition(fast-trans)
+  &:hover
+    border-color: $primary
+    box-shadow: 0 10px 3px -7px rgba($black, 0.2)
+  .card-img
+    position: relative
+    &:hover .bg-overlay
+      opacity: 1
+    .bg-overlay
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: rgba($primary, 0.5)
+      opacity: 0
+      +transition(fast-trans)
+
+  .card-body
+    .card-title
+      color: $gray-900
+      width: 100%
+      display: block
+      text-align: center
+      &:hover
+        color: $primary
+
+    .card-link
+      font-size: 0.8rem
+      color: $primary
+      &:hover, &:focus,
+        color: $gray-600
+
+    .meta
+      margin-top: 10px
+      font-size: 0.8rem
+      text-align: center
+      .meta-item, a
+        margin: 5px
+        color: $gray-600
+      a:hover
+        color: $red
+      .news-meta-link:hover
+        color: $primary
+    .desc
+      margin: 10px 0
+    i, a
+      transition: none
+

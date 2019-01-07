@@ -1,0 +1,47 @@
+.main-footer
+  padding: 3rem 0
+  background: $gray-900
+  font-size: 14px
+  color: $gray-200
+  .form-group
+    text-align: right
+    input
+      padding: 0.6rem 1rem
+      border: 1px solid $gray-800
+      outline: none
+      background: $gray-800
+      color: $white
+    i
+      background: $gray-600
+      padding: 0.6rem
+      margin-left: -4px
+      cursor: pointer
+      vertical-align: middle
+      &:hover
+        background: $primary
+  
+  p
+    margin: 1rem 0 1.5rem
+    +bp(md)
+      margin-top: 1.5rem
+
+  p > a
+    color: $primary
+    &:hover
+      text-decoration: underline
+
+  .footer-links
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    li
+      display: inline-block
+      padding: 0.1rem 0.4rem
+      &:not(:last-child)
+        border-right: 1px solid $gray-700
+      a
+        color: $gray-200
+        &:hover
+          color: $gray-600
+  .row
+    align-items: center

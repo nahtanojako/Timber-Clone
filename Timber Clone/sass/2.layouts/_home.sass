@@ -1,0 +1,44 @@
+#home
+  +background(none, bgTop)
+  position: relative
+  overflow: hidden
+  &::after
+    @extend %pseudo
+    bottom: 0
+    left: 0
+    border-bottom: 150px solid $white
+    border-left: 3000px solid transparent
+
+  .container
+    position: relative
+  .col-12
+    height: 100vh
+    position: relative
+    .headline
+      +center(y)
+      +font-size(66px)
+      color: $white
+      text-shadow: 0 2px 2px rgba($black, 0.5)
+      border-bottom: 5px solid $primary
+
+  .dots
+    position: absolute
+    bottom: 5rem
+    left: 1rem
+    z-index: 999
+    .dot
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: $gray-400
+      display: inline-block
+      margin-right: 5px
+      cursor: pointer
+      +transition(fast-trans)
+      &:hover
+        background: $white
+    .active
+      background: $white
+
+  
+

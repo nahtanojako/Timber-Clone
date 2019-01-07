@@ -1,0 +1,31 @@
+button
+  text-transform: uppercase
+  i
+    margin-right: 10px
+
+.btn-secondary
+  border-bottom: 3px solid $black
+  margin: 5px
+  &:hover,
+  &:focus
+    background: $primary
+    border-color: $primary
+    border-bottom-color: darken($primary, 20%)
+
+
+button.active
+  background: $primary
+  border-color: $primary
+  border-bottom-color: darken($primary, 20%)
+  &:hover,
+  &:focus
+    border-bottom: 3px solid $black
+
+
+.btn-primary
+  border-bottom: 3px solid $black
+  margin: 5px
+  &:hover,
+  &:focus
+    background: $secondary
+    border-color: $secondary

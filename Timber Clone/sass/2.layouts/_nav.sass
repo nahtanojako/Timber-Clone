@@ -1,0 +1,76 @@
+.navbar
+  background: $gray-900
+  padding: 0.5rem 1rem
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 999
+  +transition(fast-trans)
+  &.fixed
+    background: $black
+    margin-top: 0
+    box-shadow: 0 3px 3px rgba($primary, 0.3)
+  +bp(md)
+    background: transparent
+    margin-top: 3rem
+
+
+  .row
+    justify-content: space-between
+    align-items: center
+
+    .navbar-brand
+
+    .navbar-toggler
+      +bp(md)
+        display: none
+      .btn
+        background: $secondary
+        color: $white
+        text-transform: uppercase
+        &:hover
+          background: $gray-200
+          color: $secondary
+
+    .navbar-collapse
+      flex-basis: 100%
+      display: none
+      padding-top: 10px
+      padding-bottom: 10px
+      &.show
+        display: block
+      +bp(md)
+        flex-basis: 75%
+        display: block
+        text-align: right
+        .list-inline
+          display: flex
+          justify-content: flex-end
+          align-items: center
+
+      li
+        margin-left: -6px
+        margin-right: -6px
+        +bp(md)
+          margin: 0
+          padding: 0 1rem
+          &:not(:last-child)
+            border-right: 1px solid rgba($white, 0.2)
+
+        a
+          color: $white
+          display: block
+          padding: 7px 10px
+          border-radius: 10px
+          +font-size(14px)
+          +bp(md)
+            +font-size(15px)
+            text-transform: uppercase
+            &:hover
+              color: $primary!important
+              background: transparent!important
+
+          &:hover
+            background: $gray-200
+            color: $secondary
